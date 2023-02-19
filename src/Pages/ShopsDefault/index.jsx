@@ -29,8 +29,10 @@ const ShopsDefault = () => {
                 })}
               </Row>{" "}
             </div>
-            <div className="">
-
+            <div className="landing-page-shop-found">
+              <div className="shop-found-title-wrapper">
+                <h3 className="shop-found-sub-title">16 shops found</h3>
+              </div>
             </div>
           </div>
         </div>
