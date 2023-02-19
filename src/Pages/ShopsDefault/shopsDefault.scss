@@ -1,0 +1,35 @@
+.landing-page {
+  .landing-banner {
+    .card-shop-item {
+      margin-top: 55.06px;
+      .card-wrapper {
+        margin: 7px 0px;
+        .card-title {
+          width: 130px;
+          height: 73px;
+          background: linear-gradient(
+            147.67deg,
+            #43b028 24.24%,
+            #fbce2e 145.04%
+          );
+          box-shadow: 0px 0px 30px rgba(67, 176, 40, 0.2);
+          border-radius: 3px;
+          border: none;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          .title-card {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            color: #ffffff;
+            margin: 0px;
+          }
+        }
+       
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.container {
+  .header {
+    .header-sec {
+      display: flex;
+      .headrer-menu {
+        .menu-image {
+          height: 36px;
+          width: 36px;
+        }
+      }
+      .search-item{
+        .search-box{
+            display: flex;
+        }
+      }
+    }
+  }
+}
