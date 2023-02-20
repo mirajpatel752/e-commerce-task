@@ -2,21 +2,23 @@ import { Button, Image, Row } from "antd";
 import { useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import rightside from "../../Assets/image/right.png"
+import rightside from "../../Assets/image/right.png";
+import shopCrad from "../../Assets/image/Frame32.png";
+import hart from "../../Assets/image/heart.svg";
 
-const SliderCard = ({sliderData,name}) => {
- 
+const SliderCard = ({ sliderData, name }) => {
   return (
     <>
       <div className="slider-card-context">
         <div className="slider-title-wrapper">
           <div className="slider-title-border">
             <h3 className="slide-title">
-              {name}<div className="slider-title-border-bold"></div>
+              {name}
+              <div className="slider-title-border-bold"></div>
             </h3>
             <div className="view-all">
               <p className="view-all-text">View all</p>
-              <Image className="right" src={rightside} />
+              <Image preview={false} className="right" src={rightside} />
             </div>
           </div>
           <div className="tournaments-card-wrapper">
@@ -40,11 +42,11 @@ const SliderCard = ({sliderData,name}) => {
                 },
                 900: {
                   width: 900,
-                  slidesPerView: 6,
+                  slidesPerView: 4,
                 },
                 1200: {
                   width: 1200,
-                  slidesPerView: 5.5,
+                  slidesPerView:4,
                 },
               }}
             >
@@ -59,6 +61,10 @@ const SliderCard = ({sliderData,name}) => {
                             src={d.image}
                             preview={false}
                           />
+                          <Row className="shop-iamge">
+                            <Image className="shop-card" preview={false} src={shopCrad} />
+                            <Image className="shop-hart" preview={false} src={hart} />
+                          </Row>
                         </div>
                         <h3 className="product-name">Lemon</h3>
                         <Row className="product-price">

@@ -2,6 +2,8 @@ import phone1 from "../Assets/image/2.png";
 import phone2 from "../Assets/image/pic1.jpg";
 import phone3 from "../Assets/image/pic2.jpg";
 import Lemon from "../Assets/image/pic.jpg";
+import phone4 from "../Assets/image/pic.jpg";
+
 
 export default function data() {
   return {
@@ -141,7 +143,7 @@ export default function data() {
         item: "134",
       },
       {
-        image: phone2,
+        image: phone3,
         title: "Chemist Warehouse",
         address: "Castle Hill, NSW AU 2154",
         rate: "56",
