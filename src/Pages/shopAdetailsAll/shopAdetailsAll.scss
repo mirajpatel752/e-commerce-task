@@ -1,0 +1,168 @@
+.landing-page-shop-details {
+  .landing-banner-details {
+    background-image: url("../../Assets//image/Group503.png");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    .shop-details {
+      .shop-path {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        padding-top: 34px;
+      }
+    }
+    .shop-product-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 44px;
+      .product-wrapper {
+        .product-logo {
+          height: 118px;
+          width: 118px;
+        }
+        .product-title-name {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 40px;
+          line-height: 60px;
+          text-align: center;
+          color: #ffffff;
+          margin: 0px 0px 15px 0px;
+        }
+        .product-reting-view {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          .reting-text {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            margin: 0px 0px 0px 12.95px;
+          }
+        }
+        .product-button-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          margin: 17px 0px 26px 0px;
+          .button-more {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 30px;
+            margin-right: 14px;
+            background-color: transparent;
+          }
+          .button-review {
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            color: #ffffff;
+            border-radius: 30px;
+            background-color: transparent;
+          }
+        }
+        .product-search-box {
+          .product-search-box-border {
+            .product-search-input {
+              border-radius: 20px;
+              border: none;
+              background: #ffffff;
+              border-radius: 30px 0px 0px 30px;
+              padding: 14px 67px 13px 20px;
+            }
+            input:focus,
+            select:focus,
+            textarea:focus,
+            button:focus {
+              outline: none;
+            }
+            ::placeholder {
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: rgba(7, 6, 6, 0.7);
+            }
+            .product-search-button {
+              background: #43b028;
+              border-radius: 0px 30px 30px 0px;
+              border: none;
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: center;
+              color: #ffffff;
+              padding: 15px 22px 12px 22px;
+            }
+          }
+        }
+      }
+    }
+    .step-fillter-wrapper {
+      .step-wrapper {
+        display: flex;
+        justify-content: center;
+        .button-fillter-active {
+          width: 185px;
+          background: linear-gradient(
+            147.67deg,
+            #43b028 24.24%,
+            #fbce2e 145.04%
+          );
+          margin-right: 10px;
+          box-shadow: 0px 0px 30px rgba(67, 176, 40, 0.2);
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          padding: 15px 16px;
+          .text {
+            margin: 0px;
+            text-align: center;
+            margin-left: 11px;
+          }
+        }
+        .button-fillter {
+            width: 185px;
+            margin-right: 10px;
+            box-shadow: 0px 0px 30px rgba(67, 176, 40, 0.2);
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 15px 16px;
+            .text {
+              margin: 0px;
+              text-align: center;
+              margin-left: 11px;
+            }
+          }
+      }
+    }
+  }
+}

@@ -41,6 +41,160 @@
           color: #43b028;
         }
       }
+      .card-deteils {
+        // display: flex;
+        .card {
+          width: 263px;
+          margin: 30px 0px;
+          .ant-card-body {
+            padding: 0px;
+          }
+          .card-image {
+            width: 100%;
+          }
+          .item-name {
+            margin: 22px 0px 10px 0px;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 30px;
+            color: #070606;
+            text-align: center;
+          }
+          .location {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .item-map-icon {
+              height: 22px;
+              // width: 17.92px;
+            }
+            .location-address {
+              margin: 0px;
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              display: flex;
+              align-items: center;
+              color: #070606;
+            }
+          }
+          .rating-review {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .star {
+            }
+            .rete-reviewa {
+              font-family: "Poppins";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: rgba(7, 6, 6, 0.7);
+              padding-right: 10px;
+            }
+          }
+          .view-button {
+            margin: 0px auto 30px auto;
+            font-family: "Poppins";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            background: #43B028;
+            border-radius: 30px;
+            padding: 13px 39px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.landing-page {
+  .landing-banner {
+    background-image: url("../../Assets//image/Group\ 502.png");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    .header-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .header-title {
+        margin-top: 27px;
+        .heading {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 60px;
+          text-align: center;
+          color: #ffffff;
+          margin: 0px;
+        }
+        .heading-sub-title {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 72px;
+          text-align: center;
+          color: #ffffff;
+          margin: 0px;
+        }
+      }
+    }
+    .search-box {
+      .search-box-border {
+        display: flex;
+        justify-content: center;
+        margin-top: 65.66px;
+        .search-input {
+          border-radius: 20px;
+          border: none;
+          background: #ffffff;
+          border-radius: 30px 0px 0px 30px;
+          padding: 14px 22px 12px 22px;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus,
+        button:focus {
+          outline: none;
+        }
+        ::placeholder {
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: rgba(7, 6, 6, 0.7);
+        }
+
+        .search-button {
+          background: #43b028;
+          border-radius: 0px 30px 30px 0px;
+          border: none;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          padding-right: 14px;
+          color: #ffffff;
+        }
+      }
     }
   }
 }

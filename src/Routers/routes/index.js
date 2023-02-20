@@ -3,13 +3,6 @@ import { lazy } from "react";
 const RoutesPaths = [
   {
     path: "/",
-    component: lazy(() => import("../../Pages/LandingPage")),
-    meta: {
-      authRoute: true,
-    },
-  },
-  {
-    path: "/shopsdefault",
     component: lazy(() => import("../../Pages/ShopsDefault/index")),
     meta: {
       authRoute: true,
