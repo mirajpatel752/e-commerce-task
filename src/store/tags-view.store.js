@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   activeTagId: [],
-  tags: [],
 };
 
 const tagsViewSlice = createSlice({
@@ -10,12 +9,11 @@ const tagsViewSlice = createSlice({
   initialState,
   reducers: {
     setActiveTag(state, action) {
-      console.log( action,"state, action")
-      state.tags = action.payload;
+      state.activeTagId = action.payload;
     },
   },
 });
 
-export const { setActiveTag } = tagsViewSlice.actions;
+export const { setActiveTag} = tagsViewSlice.actions;
 
 export default tagsViewSlice.reducer;

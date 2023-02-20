@@ -16,21 +16,21 @@ const ShopAdetailsAll = () => {
   const { sliderData } = cageyTableData();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     dispatch(setActiveTag(sliderData));
-  },[])
-  const  {tags}  = useSelector(state => state.tagsView);
+  }, []);
+  const { activeTagId } = useSelector((state) => state.tagsView);
 
   return (
     <>
-     <Header />
+      <Header />
       <div className="landing-page-shop-details">
         <div className="landing-banner-details">
           <div className="container">
             <div className="shop-details">
-              <p className="shop-path" onClick={()=>navigate("/")}>
-                Home &nbsp; >&nbsp; Shops&nbsp; > &nbsp; Harris Farm Markets
+              <p className="shop-path" onClick={() => navigate("/")}>
+                Home &nbsp; > &nbsp; Shops&nbsp; > &nbsp; Harris Farm Markets
               </p>
             </div>
             <div className="shop-product-header">
@@ -80,8 +80,8 @@ const ShopAdetailsAll = () => {
                 </div>
               </div>
             </div>
-            <SliderCard sliderData={tags} name={"Fruits"} />
-            <SliderCard sliderData={tags} name={"Vegetables"} />
+            <SliderCard sliderData={activeTagId} name={"Fruits"} />
+            <SliderCard sliderData={activeTagId} name={"Vegetables"} />
           </div>
         </div>
       </div>

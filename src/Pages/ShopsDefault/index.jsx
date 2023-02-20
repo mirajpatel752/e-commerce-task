@@ -1,5 +1,4 @@
 import { Button, Card, Col, Image, Rate, Row } from "antd";
-import HeaderSearch from "../../common/commonComponet/headerSearch";
 import cageyTableData from "../../utility/utility";
 import all_image from "../../Assets/image/2.png";
 import map_icon from "../../Assets/image/map pin.png";
@@ -8,7 +7,7 @@ import Footer from "../../common/commonComponet/footer/Footer";
 import { useEffect, useState } from "react";
 import Header from "../../common/Header";
 import { useDispatch, useSelector } from "react-redux";
-import { setCard } from "../../store/card";
+import { setCard } from "../../store/card.store";
 
 const ShopsDefault = () => {
   const { dataShop, cardData } = cageyTableData();
@@ -28,10 +27,10 @@ const ShopsDefault = () => {
     const values = e.target.value;
     setSearch(values);
   };
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(setCard(cardData));
-  },[])
-  const   {tags}  = useSelector(state => state?.tagsView );
+  }, []);
+  const tags  = useSelector((state) => state.card.card);
 
   return (
     <>
