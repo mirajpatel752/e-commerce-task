@@ -1,14 +1,18 @@
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./common/Header/header.scss";
-import Router from "./Routers/router";
 import "./Pages/ShopsDefault/shopsDefault.scss";
 import "./Pages/shopAdetailsAll/shopAdetailsAll.scss";
-import "./common/commonComponet/common.scss"
+import "./common/commonComponet/common.scss";
+import ShopsDefault from "./Pages/ShopsDefault";
+import ShopAdetailsAll from "./Pages/shopAdetailsAll";
 
 function App() {
   return (
     <BrowserRouter>
-      <Router />
+      <Routes>
+        <Route path="/" element={<ShopsDefault />} />
+        <Route path="/shopsdetails-all" element={<ShopAdetailsAll />} />
+      </Routes>
     </BrowserRouter>
   );
 }

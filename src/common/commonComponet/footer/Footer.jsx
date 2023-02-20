@@ -1,7 +1,12 @@
-import { Col, Row, Space } from "antd";
+import { Col, Image, Row, Space } from "antd";
 import { FacebookOutlined, InstagramOutlined } from "@ant-design/icons";
+import topScroll from "../../../Assets/image/top1.png"
 
 const Footer = () => {
+
+  const scrillTop = ()=>{
+    window.scrollTo(0, 0)
+  }
   return (
     <>
       <div className="footer-back">
@@ -37,6 +42,7 @@ const Footer = () => {
                 </Space>
               </div>
             </Col>
+            <div onClick={()=>scrillTop()}><Image preview={false} src={topScroll} /></div>
           </Row>
         </div>
       </div>

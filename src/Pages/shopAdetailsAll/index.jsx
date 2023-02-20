@@ -7,15 +7,29 @@ import Shoppingtwo from "../../Assets/image/Page.png";
 import SliderCard from "../../common/commonComponet/SliderCard";
 import cageyTableData from "../../utility/utility";
 import Footer from "../../common/commonComponet/footer/Footer";
+import { useNavigate } from "react-router-dom";
+import Header from "../../common/Header";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveTag } from "../../store/tags-view.store";
 const ShopAdetailsAll = () => {
   const { sliderData } = cageyTableData();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  useEffect(()=>{
+    dispatch(setActiveTag(sliderData));
+  },[])
+  const  {tags}  = useSelector(state => state.tagsView);
+
   return (
     <>
+     <Header />
       <div className="landing-page-shop-details">
         <div className="landing-banner-details">
           <div className="container">
             <div className="shop-details">
-              <p className="shop-path">
+              <p className="shop-path" onClick={()=>navigate("/")}>
                 Home &nbsp; >&nbsp; Shops&nbsp; > &nbsp; Harris Farm Markets
               </p>
             </div>
@@ -66,9 +80,8 @@ const ShopAdetailsAll = () => {
                 </div>
               </div>
             </div>
-            <SliderCard sliderData={sliderData} name={"Fruits"} />
-            <SliderCard sliderData={sliderData} name={"Vegetables"} />
-
+            <SliderCard sliderData={tags} name={"Fruits"} />
+            <SliderCard sliderData={tags} name={"Vegetables"} />
           </div>
         </div>
       </div>

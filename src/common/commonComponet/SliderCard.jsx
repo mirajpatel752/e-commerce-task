@@ -2,10 +2,10 @@ import { Button, Image, Row } from "antd";
 import { useState } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import rightside from "../../Assets/image/right.png"
 
 const SliderCard = ({sliderData,name}) => {
  
-  const [picksForYouTopic, setPicksForYouTopic] = useState(sliderData);
   return (
     <>
       <div className="slider-card-context">
@@ -16,6 +16,7 @@ const SliderCard = ({sliderData,name}) => {
             </h3>
             <div className="view-all">
               <p className="view-all-text">View all</p>
+              <Image className="right" src={rightside} />
             </div>
           </div>
           <div className="tournaments-card-wrapper">
@@ -47,7 +48,7 @@ const SliderCard = ({sliderData,name}) => {
                 },
               }}
             >
-              {picksForYouTopic.map((d, i) => {
+              {sliderData.map((d, i) => {
                 return (
                   <SwiperSlide>
                     <div className="card-wrapper" key={i}>

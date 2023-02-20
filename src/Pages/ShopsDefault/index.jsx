@@ -5,13 +5,17 @@ import all_image from "../../Assets/image/2.png";
 import map_icon from "../../Assets/image/map pin.png";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../common/commonComponet/footer/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../../common/Header";
+import { useDispatch, useSelector } from "react-redux";
+import { setCard } from "../../store/card";
 
 const ShopsDefault = () => {
   const { dataShop, cardData } = cageyTableData();
+
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const produceDeteils = () => {
     navigate("/shopsdetails-all");
   };
@@ -24,7 +28,10 @@ const ShopsDefault = () => {
     const values = e.target.value;
     setSearch(values);
   };
-  console.log(search.length > 0, "search");
+  useEffect(()=>{
+    dispatch(setCard(cardData));
+  },[])
+  const   {tags}  = useSelector(state => state?.tagsView );
 
   return (
     <>
@@ -56,15 +63,13 @@ const ShopsDefault = () => {
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                   {dataShop.map((item, key) => {
                     return (
-                      <>
-                        <Col key={key} className="gutter-row">
-                          <div className="card-wrapper">
-                            <Card className="card-title">
-                              <h4 className="title-card">{item.title}</h4>
-                            </Card>
-                          </div>
-                        </Col>
-                      </>
+                      <Col key={key} className="gutter-row">
+                        <div className="card-wrapper">
+                          <Card className="card-title">
+                            <h4 className="title-card">{item.title}</h4>
+                          </Card>
+                        </div>
+                      </Col>
                     );
                   })}
                 </Row>{" "}
@@ -76,9 +81,9 @@ const ShopsDefault = () => {
 
                 <div className="card-deteils">
                   <Row gutter={16}>
-                    {cardData.map((item, key) => {
+                    {tags.map((item, key) => {
                       return (
-                        <Col className="gutter-row">
+                        <Col key={key} className="gutter-row">
                           <Card className="card">
                             <Image
                               preview={false}
@@ -121,7 +126,7 @@ const ShopsDefault = () => {
           ) : null}
         </div>
       </div>
-      {search.length > 0 ? ( <Footer /> ) : null}
+      {search.length > 0 ? <Footer /> : null}
     </>
   );
 };

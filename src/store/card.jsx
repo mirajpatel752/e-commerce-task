@@ -1,21 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  activeTagId: [],
   tags: [],
 };
 
 const tagsViewSlice = createSlice({
-  name: 'tagsView',
+  name: 'card',
   initialState,
   reducers: {
-    setActiveTag(state, action) {
-      console.log( action,"state, action")
+    setCard(state, action) {
       state.tags = action.payload;
     },
   },
 });
 
-export const { setActiveTag } = tagsViewSlice.actions;
+export const { setCard } = tagsViewSlice.actions;
 
 export default tagsViewSlice.reducer;
